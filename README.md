@@ -1,100 +1,66 @@
-# claude-config (template)
+# claude-config
 
-Un point de départ pour configurer **Claude Code**, la version en ligne de commande de Claude.
-Ce dépôt ne contient aucune donnée personnelle, juste la structure et des exemples à remplir.
+Claude, l'assistant, arrive vierge. Sans caractère, sans habitudes, sans mémoire de qui tu es.
+Ce dossier est tout ce qu'on lui a appris pour qu'il devienne un collaborateur plutôt qu'un
+inconnu poli. C'est une personnalité, un ensemble de règles et de réflexes, posés noir sur blanc
+et rangés au même endroit pour ne jamais avoir à les réexpliquer.
 
-Tu pars de zéro ? Ce README t'explique quoi c'est, à quoi ça sert, et comment t'en servir.
+Cette version est nettoyée de toute donnée personnelle. C'est le squelette : à toi d'y mettre ta
+propre chair. Ce texte raconte ce qu'il y a dedans, ce que chaque morceau fait, et comment le
+rendre tien.
 
----
+## Ce qu'on a mis dedans
 
-## C'est quoi Claude Code ?
+Au coeur, il y a le fichier qui donne son tempérament à Claude. Il décrit comment il doit se
+comporter : direct ou prudent, bavard ou sec, quelles habitudes prendre, quelles fautes ne jamais
+commettre. C'est la différence entre un assistant générique et un qui te connaît. Deux fichiers
+compagnons s'y greffent automatiquement : l'un précise sa façon de travailler avec toi au
+quotidien, l'autre la manière dont il rédige quand un texte est destiné à d'autres yeux que les
+tiens, un message, un mot d'excuse, une note laissée à quelqu'un.
 
-Claude Code est un assistant IA qui tourne dans ton terminal et peut lire/écrire des fichiers,
-lancer des commandes, etc. Il lit sa configuration dans un dossier caché `.claude` situé dans
-ton dossier utilisateur (`~/.claude` sur Mac/Linux, `C:\Users\TonNom\.claude` sur Windows).
+Ensuite viennent les réglages. Pense à un tableau de bord : quel modèle utiliser, quelles
+extensions activer, quels petits automatismes déclencher, et l'affichage discret qui te rappelle
+en bas de l'écran l'heure et l'endroit où tu travailles. Rien de compliqué, juste des interrupteurs.
 
-Ce dépôt est une **copie propre de ce dossier de config**, prête à réutiliser sur une autre
-machine ou à partager.
+Il y a aussi tes raccourcis. D'un côté des combinaisons de touches que tu choisis toi-même. De
+l'autre, des commandes que tu inventes : tu tapes un mot court, et Claude exécute toute une
+routine que tu as décrite une fois pour toutes. On en a laissé un exemple à recopier et à adapter.
 
----
+Puis les réflexes automatiques. Ce sont de petites actions que Claude déclenche seul à certains
+moments, sans que tu aies à le demander. Par exemple se rafraîchir la mémoire au démarrage, ou se
+rappeler l'essentiel quand une longue conversation vient d'être résumée.
 
-## À quoi sert chaque fichier ?
+Enfin, la mémoire. C'est ce que Claude retient d'une fois sur l'autre : tes préférences, tes
+projets, les leçons tirées de vos échanges passés. Ici on n'a gardé que la forme et trois exemples,
+parce que le reste, c'est du personnel. La tienne se construira toute seule, au fil du temps.
 
-| Fichier | Ce que ça fait |
-|---|---|
-| `CLAUDE.md` | Le fichier le plus important. Ce sont tes **instructions permanentes** : comment Claude doit se comporter, ton style, tes règles. Claude le lit au début de chaque session. |
-| `RTK.md` | Instructions supplémentaires chargées automatiquement par `CLAUDE.md` (via la ligne `@RTK.md`). Ici : préférences de travail. |
-| `PUBLIC_WRITING.md` | Règles de style quand Claude écrit un texte pour quelqu'un d'autre (mail, message, description de commit). |
-| `settings.json` | Les **réglages** : quel modèle utiliser, quels plugins activer, les hooks, la barre de statut. Format JSON. |
-| `keybindings.json` | Tes raccourcis clavier persos. |
-| `statusline.ps1` | Petit script qui affiche l'heure + le dossier + le modèle en bas de l'écran (Windows/PowerShell). |
-| `commands/example.md` | Un **slash command** : un raccourci que tu tapes (ex `/example`) pour lancer une action prédéfinie. Duplique le fichier pour en créer d'autres. |
-| `hooks/` | Des scripts que Claude lance automatiquement à certains moments (au démarrage, après un résumé de conversation). |
-| `memory/` | La **mémoire** de Claude : des petites notes qu'il retient entre les sessions (tes préférences, tes projets). Ici on garde juste le format + 3 exemples. |
+## Les extensions
 
----
+Trois extensions sont branchées d'office. Tu n'as rien à aller chercher : elles s'installent seules
+au premier lancement.
 
-## Les plugins
+- **ponytail** ([DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)) : pousse Claude vers la solution la plus simple, celle qui tient en peu de lignes, jamais l'usine à gaz.
+- **andrej-karpathy-skills** ([forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills)) : de bonnes habitudes qui lui évitent les erreurs classiques.
+- **context-mode** ([mksglu/context-mode](https://github.com/mksglu/context-mode)) : lui fait traiter les gros paquets d'information à l'écart, ce qui économise de la matière et donc de l'argent.
 
-Trois plugins sont activés dans `settings.json`. Tu n'as **rien à télécharger à la main** :
-Claude Code les réinstalle tout seul au premier lancement.
+Un quatrième outil est mentionné dans les réglages, **rtk**, qui compresse les commandes pour la
+même raison d'économie. Ce n'est pas une extension et il n'a pas de page publique : c'est un
+programme à part. Si tu ne l'as pas, tout le reste fonctionne quand même, il suffit de retirer la
+ligne qui l'appelle.
 
-- **ponytail** ([DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)) : pousse Claude à écrire le code le plus simple possible, pas d'usine à gaz.
-- **andrej-karpathy-skills** ([forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills)) : bonnes pratiques de code pour éviter les erreurs classiques.
-- **context-mode** ([mksglu/context-mode](https://github.com/mksglu/context-mode)) : économise des tokens (donc de l'argent) sur les grosses sorties.
+## Le rendre tien
 
----
+Tout ce qui est écrit entre chevrons, comme `<USERNAME>` ou `<PROJECT>`, est un trou à combler.
+On a vidé ces cases exprès pour qu'aucune de nos informations ne traîne ici. Parcours les fichiers,
+remplace chaque trou par ta propre valeur : ton nom sur la machine, l'adresse de tes serveurs si tu
+en as, tes projets. Là où on avait décrit notre installation, efface et raconte la tienne, ou
+laisse vide si tu n'en as pas.
 
-## Comment l'utiliser (pas à pas)
+Une fois les cases remplies, un petit script recopie l'ensemble à l'endroit où Claude va le lire.
+À partir de là, il démarre avec ton caractère, tes règles et tes réflexes déjà en place.
 
-### 1. Installer Claude Code
-Suis la doc officielle : https://docs.claude.com/claude-code . Une fois installé, la commande
-`claude` doit marcher dans ton terminal.
+## Un mot sur la prudence
 
-### 2. Récupérer ce dépôt
-```bash
-git clone https://github.com/<GH_USER>/claude-config-template.git
-cd claude-config-template
-```
-
-### 3. Remplacer les placeholders
-Le dépôt est volontairement vide de données perso. Cherche les morceaux entre chevrons `<...>`
-et remplace-les par les tiens :
-
-- `<USERNAME>` dans `settings.json` : ton nom d'utilisateur Windows (ex `C:/Users/marie`).
-- Vérifie aussi le chemin de `node` dans `settings.json` (par défaut `C:/Program Files/nodejs/node.exe`).
-- `<PROJECT>` dans `restore.ps1` : le nom du dossier où vit ta mémoire (laisse tel quel si tu débutes).
-- Dans `CLAUDE.md`, remplis les sections **Infrastructure** et **Projets** avec les tiennes (ou supprime-les).
-
-### 4. Installer la config
-**Windows (PowerShell) :**
-```powershell
-./restore.ps1
-```
-Ça copie tout dans `C:\Users\TonNom\.claude`.
-
-**Mac/Linux :** copie les fichiers à la main dans `~/.claude/` en gardant la même structure
-(`CLAUDE.md`, `settings.json`, le dossier `commands/`, `hooks/`, etc.).
-
-### 5. Lancer Claude
-```bash
-claude
-```
-Il lit ta config, réinstalle les plugins, et c'est parti.
-
----
-
-## rtk (optionnel, pour aller plus loin)
-
-`settings.json` contient un hook qui appelle un outil externe nommé `rtk` (Rust Token Killer,
-compresse les commandes pour économiser des tokens). Ce n'est **pas** un plugin Claude et il n'a
-pas de dépôt public : c'est un binaire séparé. Tu ne l'as pas ? Deux choix : le placer dans
-`~/.local/bin/`, ou simplement **supprimer le bloc `PreToolUse` dans `settings.json`**. Sans lui,
-tout le reste marche.
-
----
-
-## Rappel important
-
-Ce dépôt public ne doit **jamais** contenir de secrets : clés API, tokens de bot, mots de passe,
-IPs privées. Garde ça dans un dépôt **privé** séparé. Les placeholders `<...>` sont là pour ça.
+Ce dossier est public. Il ne doit jamais contenir de secret : ni mot de passe, ni clé, ni adresse
+privée, ni jeton d'accès. Ces choses-là vivent dans un dossier fermé, séparé. Les trous entre
+chevrons sont là précisément pour ça : garder la forme, laisser le contenu sensible dehors.
