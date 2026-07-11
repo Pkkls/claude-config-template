@@ -9,6 +9,39 @@ Cette version est nettoyée de toute donnée personnelle. C'est le squelette : �
 propre chair. Ce texte raconte ce qu'il y a dedans, ce que chaque morceau fait, et comment le
 rendre tien.
 
+## Pourquoi c'est mieux qu'un Claude vierge
+
+La différence n'est pas cosmétique. Un Claude vierge est compétent mais amnésique, prudent à
+l'excès, et enclin à en faire trop. Cette configuration corrige ces trois défauts d'un coup, et
+au quotidien ça se sent.
+
+D'abord, la mémoire. Un Claude vierge oublie tout dès que tu fermes la fenêtre. Chaque nouvelle
+conversation repart de zéro : tu réexpliques qui tu es, sur quoi tu travailles, ce que tu as déjà
+tranché la veille. Avec cette configuration, il retient. Tes préférences, tes projets en cours, les
+leçons de vos échanges passés sont là au réveil. Tu ne répètes plus rien, et lui ne repropose plus
+une idée que tu as déjà rejetée.
+
+Ensuite, le ton. Un Claude vierge enrobe. Il ouvre par une formule flatteuse, empile les
+précautions, termine par une conclusion dont tu n'as que faire. Ici on lui a appris à dire la chose
+et à s'arrêter. Il va droit au fait, il te contredit quand tu te trompes au lieu d'acquiescer poliment,
+et il sépare ce qui est sûr de ce qu'il suppose. Tu lis moins pour comprendre plus.
+
+Puis, la retenue. C'est le travers le plus coûteux d'un Claude vierge : tu demandes une chose, il t'en
+livre cinq. Une option en trop, un réglage que tu n'as pas demandé, une abstraction pour un cas qui
+n'arrivera jamais. Tu passes ensuite ton temps à retirer ce qu'il a ajouté. Les règles d'ici lui
+interdisent ce zèle. Il livre exactement le périmètre demandé, complet et minimal, et il vise la
+solution la plus simple qui marche plutôt que la plus impressionnante.
+
+Il y a aussi ce que tu ne réécris qu'une fois. Les tâches que tu répètes deviennent un mot court à
+taper. Les réflexes automatiques lui font retrouver le fil tout seul, même après une longue
+conversation résumée, sans que tu aies à recoller le contexte. Et parce qu'il traite les gros
+volumes à l'écart et compresse ses commandes, la même quantité de travail consomme moins et coûte
+moins cher.
+
+Mis bout à bout, ça change la nature de la relation. Tu n'as plus un outil qu'il faut recadrer à
+chaque phrase, mais un collaborateur qui connaît tes habitudes, respecte ta façon de faire, et te
+fait gagner du temps au lieu d'en réclamer.
+
 ## Ce qu'on a mis dedans
 
 Au coeur, il y a le fichier qui donne son tempérament à Claude. Il décrit comment il doit se
