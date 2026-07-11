@@ -43,10 +43,11 @@ au premier lancement.
 - **andrej-karpathy-skills** ([forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills)) : de bonnes habitudes qui lui évitent les erreurs classiques.
 - **context-mode** ([mksglu/context-mode](https://github.com/mksglu/context-mode)) : lui fait traiter les gros paquets d'information à l'écart, ce qui économise de la matière et donc de l'argent.
 
-Un quatrième outil est mentionné dans les réglages, **rtk**, qui compresse les commandes pour la
-même raison d'économie. Ce n'est pas une extension et il n'a pas de page publique : c'est un
-programme à part. Si tu ne l'as pas, tout le reste fonctionne quand même, il suffit de retirer la
-ligne qui l'appelle.
+Un quatrième outil est mentionné dans les réglages, **rtk** ([rtk-ai/rtk](https://github.com/rtk-ai/rtk)),
+pour Rust Token Killer. Il se place entre Claude et les commandes qu'il lance, et les réécrit en plus
+court avant de les exécuter. Le résultat est le même mais tient en moins de mots, ce qui économise de
+la matière et donc de l'argent. Ce n'est pas une extension mais un programme à part. Si tu ne l'as
+pas, tout le reste fonctionne quand même, il suffit de retirer la ligne qui l'appelle.
 
 ## Le rendre tien
 
