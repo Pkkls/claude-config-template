@@ -1,0 +1,7 @@
+{
+  "bindings": [
+    { "key": "ctrl+u", "action": "clearBeforeCursor" },
+    { "key": "ctrl+k", "action": "clearAfterCursor" },
+    { "key": "ctrl+shift+c", "action": "copyLastResponse" }
+  ]
+}

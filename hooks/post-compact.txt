@@ -1,0 +1,29 @@
+## Post-compact rappel
+
+### Infrastructure
+<!-- Liste tes machines : nom, IP, accès SSH. Ex : -->
+- <HOST>: <HOST_IP> (SSH: ssh -i <SSH_KEY> user@<HOST_IP>) - specs
+
+### Projets
+<!-- Liste tes projets actifs : nom, chemin, stack. -->
+
+### Token optimization
+- ctx_batch_execute > Bash pour outputs longs (SAUF PowerShell - corrompt $_)
+- ctx_execute > Read pour analyse fichiers
+- Sous-agents: haiku=trivial, sonnet=moyen, principal=archi/synthese
+
+### Regles
+- Francais. Concis. Pas de suggestions non demandees. Pas de noms en dur. Pas d'emojis.
+- Pas de tiret cadratin (--). Repos GitHub toujours --private.
+- ctx_batch_execute interdit pour PowerShell (corrompt $_ -> /usr/bin/bash).
+
+### Pieges recurrents
+- SSH busybox: JAMAIS piper stdin (BOM/CRLF). Base64 en arg. Pas pkill/pgrep/stat -c ; utiliser killall, ps|grep, wc -c.
+- PowerShell SSH: $() dans double quotes = expansion locale. Single quotes obligatoires.
+- WSL depuis Git Bash: MSYS_NO_PATHCONV=1 sinon /home traduit en chemin Windows.
+- Extensions Chrome/Firefox: NE PAS bumper vite/crxjs/zod sans smoke-test navigateur.
+
+### Hooks actifs
+- PreToolUse Bash: rtk hook (si rtk installe)
+- SessionStart: context-mode cache heal + post-compact inject
+- Karpathy guidelines: plugin andrej-karpathy-skills
