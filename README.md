@@ -39,9 +39,9 @@ machine ou à partager.
 Trois plugins sont activés dans `settings.json`. Tu n'as **rien à télécharger à la main** :
 Claude Code les réinstalle tout seul au premier lancement.
 
-- **ponytail** : pousse Claude à écrire le code le plus simple possible, pas d'usine à gaz.
-- **andrej-karpathy-skills** : bonnes pratiques de code pour éviter les erreurs classiques.
-- **context-mode** : économise des tokens (donc de l'argent) sur les grosses sorties.
+- **ponytail** ([DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)) : pousse Claude à écrire le code le plus simple possible, pas d'usine à gaz.
+- **andrej-karpathy-skills** ([forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills)) : bonnes pratiques de code pour éviter les erreurs classiques.
+- **context-mode** ([mksglu/context-mode](https://github.com/mksglu/context-mode)) : économise des tokens (donc de l'argent) sur les grosses sorties.
 
 ---
 
@@ -86,9 +86,11 @@ Il lit ta config, réinstalle les plugins, et c'est parti.
 
 ## rtk (optionnel, pour aller plus loin)
 
-`settings.json` contient un hook qui appelle un outil externe nommé `rtk` (compresse les commandes
-pour économiser des tokens). Tu ne l'as pas ? Deux choix : l'installer dans `~/.local/bin/`, ou
-simplement **supprimer le bloc `PreToolUse` dans `settings.json`**. Sans lui, tout le reste marche.
+`settings.json` contient un hook qui appelle un outil externe nommé `rtk` (Rust Token Killer,
+compresse les commandes pour économiser des tokens). Ce n'est **pas** un plugin Claude et il n'a
+pas de dépôt public : c'est un binaire séparé. Tu ne l'as pas ? Deux choix : le placer dans
+`~/.local/bin/`, ou simplement **supprimer le bloc `PreToolUse` dans `settings.json`**. Sans lui,
+tout le reste marche.
 
 ---
 
